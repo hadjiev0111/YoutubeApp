@@ -10,6 +10,7 @@ interface YoutubeApi {
     fun getPlaylists(
         @Query("part") part: String,
         @Query("channelId") channelId: String,
+        @Query("pageToken") pageToken: String?,
         @Query("key") apiKey: String
     ): Call<VideoInfo>
 
@@ -20,5 +21,13 @@ interface YoutubeApi {
         @Query("playlistId") playlistId: String,
         @Query("key") key: String
     ): Call<VideoInfo>
+
+    @GET("playlists")
+    suspend fun getPlaylistsWithCourutines(
+        @Query("part") part: String,
+        @Query("channelId") channelId: String,
+        @Query("pageToken") pageToken: String?,
+        @Query("key") apiKey: String
+    ): VideoInfo
 
 }

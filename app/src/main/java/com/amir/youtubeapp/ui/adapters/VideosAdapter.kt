@@ -5,13 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.amir.youtubeapp.R
+import com.amir.youtubeapp.data.model.PlaylistItem
 import com.amir.youtubeapp.data.model.VideoInfo
 import com.amir.youtubeapp.ui.listener.OnItemClickListener
 import com.amir.youtubeapp.utils.setImageFromUrl
 import kotlinx.android.synthetic.main.video_item.view.*
 
 class VideosAdapter(var listener: OnItemClickListener) : RecyclerView.Adapter<BaseViewHolder>() {
-    var items = mutableListOf<VideoInfo.Info>()
+    var items = mutableListOf<PlaylistItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         val view =
@@ -27,11 +28,11 @@ class VideosAdapter(var listener: OnItemClickListener) : RecyclerView.Adapter<Ba
         holder.onBind(position)
     }
 
-    fun getItem(position: Int): VideoInfo.Info {
+    fun getItem(position: Int): PlaylistItem {
         return items[position]
     }
 
-    fun addItems(list: MutableList<VideoInfo.Info>) {
+    fun addItems(list: MutableList<PlaylistItem>) {
         items.clear()
         items.addAll(list)
         notifyDataSetChanged()

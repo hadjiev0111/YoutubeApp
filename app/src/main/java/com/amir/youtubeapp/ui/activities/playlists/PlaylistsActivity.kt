@@ -34,9 +34,8 @@ class PlaylistsActivity : AppCompatActivity(), OnItemClickListener {
 
         model = ViewModelProvider(this)[PlaylistsViewModel::class.java]
         initAdapter()
-        model.setPlaylists()
-        model.playlists.observe(this, Observer {
-            adapter.addItems(it!!)
+        model.setPlaylists().observe(this, Observer {
+            adapter.addItems(it)
         })
     }
 
