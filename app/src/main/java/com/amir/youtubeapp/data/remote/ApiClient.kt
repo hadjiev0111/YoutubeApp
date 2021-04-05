@@ -1,19 +1,26 @@
 package com.amir.youtubeapp.data.remote
 
 import com.amir.youtubeapp.`object`.Constants.BASE_URL
+import org.koin.core.module.Module
+import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
-    private lateinit var apiInstance: YoutubeApi
+    val networkModule : Module = module {
+        factory { provideApi(get()) }
+        single { getInstance() }
+    }
 
-    fun getInstance(): YoutubeApi {
-        apiInstance = Retrofit.Builder()
+    fun getInstance() : Retrofit {
+        return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .build().create(YoutubeApi::class.java)
-        return apiInstance
+            .build()
     }
+
+    fun provideApi(retrofit: Retrofit) : YoutubeApi =
+        retrofit.create(YoutubeApi::class.java)
 
 }

@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="app_bar_height">180dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">236dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Margins -->
+    <dimen name="small_margin">4dp</dimen>
+    <dimen name="element_margin">8dp</dimen>
+    <dimen name="medium_margin">12dp</dimen>
+    <dimen name="big_margin">24dp</dimen>
+    <dimen name="very_big_margin">32dp</dimen>
+    <dimen name="very_high_margin">52dp</dimen>
+    <dimen name="margin_top_new_orders">40dp</dimen>
+    <dimen name="page_margin">16dp</dimen>
+    <dimen name="floating_button">80dp</dimen>
+
+    <!--Corners-->
+    <dimen name="corner_3">3dp</dimen>
+    <dimen name="corner_4">4dp</dimen>
+    <dimen name="corner_6">6dp</dimen>
+
+    <!--Sizes-->
+    <dimen name="loader_medium">34dp</dimen>
+    <dimen name="toolbar_title">18sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+
+    <!--Elevation-->
+    <dimen name="null_elevation">0dp</dimen>
+    <dimen name="small_elevation">4dp</dimen>
+    <dimen name="medium_elevation">6dp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+
 </resources>

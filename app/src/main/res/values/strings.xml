@@ -104,4 +104,10 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="signs_of_emotional_distress_or_trauma">SIGNS OF EMOTIONAL DISTRESS OR TRAUMA</string>
+    <string name="how_displacement_instability_and_uncertainty_affect_children">HOW DISPLACEMENT INSTABILITY and UNCERTAINTY AFFECT CHILDREN</string>
+    <string name="refugee_children_often_have_suffered_many_losses_and_because_of_that_they_are_grieving_these_losses_they_re_grieving_the_loss_of_their_home_the_loss_of_the_life_they_knew_the_places_where_they_were_used_to_be_and_that_they_loved_to_go_the_loss_of_their_friends_and_certainly_the_loss_of_their_family_members_and_loved_ones_so_naturally_they_re_going_to_have_sadness">Refugee children often have suffered many losses and because of that, they are grieving these losses they\'re grieving the loss of their home, the loss of the life they knew, the places where they were used to be and that they loved to go. The loss of their friends, and certainly the loss of their family members and loved ones. So naturally they\'re going to have sadness.</string>
+    <string name="Emotional_text">Emotional well being and healing practices for children</string>
+    <string name="in_this_text">In this series we break down the impact of displacement instability violence and trauma in children and offer exercises to support children in their healing journey</string>
+    <string name="videos_series_text">32 videos series</string>
 </resources>

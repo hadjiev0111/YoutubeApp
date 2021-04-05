@@ -1,4 +1,4 @@
-package com.amir.youtubeapp.ui.adapters
+package com.amir.youtubeapp.ui.activities.playlists.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.amir.youtubeapp.R
 import com.amir.youtubeapp.data.model.PlaylistItem
-import com.amir.youtubeapp.data.model.VideoInfo
+import com.amir.youtubeapp.ui.basevh.BaseViewHolder
 import com.amir.youtubeapp.ui.listener.OnItemClickListener
 import com.amir.youtubeapp.utils.setImageFromUrl
 import kotlinx.android.synthetic.main.playlist_item.view.*

@@ -1,4 +1,4 @@
-package com.amir.youtubeapp.ui.adapters
+package com.amir.youtubeapp.ui.activities.videos.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.amir.youtubeapp.R
 import com.amir.youtubeapp.data.model.PlaylistItem
-import com.amir.youtubeapp.data.model.VideoInfo
+import com.amir.youtubeapp.ui.basevh.BaseViewHolder
 import com.amir.youtubeapp.ui.listener.OnItemClickListener
 import com.amir.youtubeapp.utils.setImageFromUrl
 import kotlinx.android.synthetic.main.video_item.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class VideosAdapter(var listener: OnItemClickListener) : RecyclerView.Adapter<BaseViewHolder>() {
     var items = mutableListOf<PlaylistItem>()
@@ -42,8 +44,14 @@ class VideosAdapter(var listener: OnItemClickListener) : RecyclerView.Adapter<Ba
         override fun onBind(position: Int) {
             itemView.video_title.text = items[position].snippet?.title
             itemView.iv_video.setImageFromUrl(items[position].snippet?.thumbnails?.medium?.url)
-            itemView.video_description.text = items[position].snippet?.description
+            itemView.video_description.text = "опубликовано: ${getDate(items[position].snippet?.publishedAt.toString())}"
             itemView.setOnClickListener { listener.onItemClick(adapterPosition) }
+        }
+
+        fun getDate(dateStr: String): String {
+            val formatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH)
+            val mDate = formatter.parse(dateStr) // this never ends while debugging
+            return mDate.toLocaleString()
         }
     }
 }

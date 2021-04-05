@@ -27,19 +27,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="8dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:layout_width="12dp"
+                android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/ic_back_arrow" />
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_back_arrow"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/back"
+                android:textSize="20sp"
                 android:textColor="@color/red" />
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -61,7 +64,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/playing_video_title"
@@ -69,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="HOW DISPLACEMENT INSTABILITY and UNCERTAINTY AFFECT CHILDREN"
+                android:text="@string/how_displacement_instability_and_uncertainty_affect_children"
                 android:textColor="@color/grey"
                 android:textSize="20sp"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -81,7 +84,7 @@
                 android:layout_height="0dp"
                 android:layout_margin="16dp"
                 android:fontFamily="sans-serif"
-                android:text="Refugee children often have suffered many losses and because of that, they are grieving these losses they're grieving the loss of their home, the loss of the life they knew, the places where they were used to be and that they loved to go. The loss of their friends, and certainly the loss of their family members and loved ones. So naturally they're going to have sadness."
+                android:text="@string/refugee_children_often_have_suffered_many_losses_and_because_of_that_they_are_grieving_these_losses_they_re_grieving_the_loss_of_their_home_the_loss_of_the_life_they_knew_the_places_where_they_were_used_to_be_and_that_they_loved_to_go_the_loss_of_their_friends_and_certainly_the_loss_of_their_family_members_and_loved_ones_so_naturally_they_re_going_to_have_sadness"
                 android:textColor="@color/grey"
                 android:textSize="16sp"
                 app:layout_constraintTop_toBottomOf="@id/playing_video_title" />

@@ -4,21 +4,21 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amir.youtubeapp.R
 import com.amir.youtubeapp.ui.activities.disconnect.DisconnectActivity
 import com.amir.youtubeapp.ui.activities.videos.VideosActivity
-import com.amir.youtubeapp.ui.adapters.PlaylistsAdapter
+import com.amir.youtubeapp.ui.activities.playlists.adapter.PlaylistsAdapter
 import com.amir.youtubeapp.ui.listener.OnItemClickListener
 import com.amir.youtubeapp.utils.isConnected
 import kotlinx.android.synthetic.main.activity_playlists.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PlaylistsActivity : AppCompatActivity(), OnItemClickListener {
 
-    private lateinit var model: PlaylistsViewModel
+    private val model: PlaylistsViewModel by viewModel()
 
     private lateinit var adapter: PlaylistsAdapter
 
@@ -31,8 +31,6 @@ class PlaylistsActivity : AppCompatActivity(), OnItemClickListener {
             startActivity(intent)
             finish()
         }
-
-        model = ViewModelProvider(this)[PlaylistsViewModel::class.java]
         initAdapter()
         model.setPlaylists().observe(this, Observer {
             adapter.addItems(it)

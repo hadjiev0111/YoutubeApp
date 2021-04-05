@@ -13,7 +13,8 @@ data class PlaylistItem(
     var snippet: Snippet? = null,
     var playlistId: String? = null,
     var contentDetails: ContentDetails? = null,
-    var startTime: Float = 0f
+    var startTime: Float = 0f,
+    var timeString: String = ""
 )
 {
     override fun toString(): String {

@@ -1,4 +1,4 @@
-package com.amir.youtubeapp.ui.adapters
+package com.amir.youtubeapp.ui.basevh
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
